@@ -57,14 +57,14 @@
                                                 <li><a href="elements.php">elements</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="about.php">About</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                        <li><a href="about.php">Nosotros</a></li>
+                                        <li><a href="#">Foro <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="blog.php">blog</a></li>
-                                                <li><a href="single-blog.php">single-blog</a></li>
+                                                <li><a href="blog.php">Foro</a></li>
+                                                <li><a href="single-blog.php">Detalles del foro</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.php">Contact</a></li>
+                                        <li><a href="contact.php">Contáctanos</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -596,10 +596,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <div class="popup_inner">
                 <div class="logo text-center">
                     <a href="#">
-                        <img src="img/form-logo.png" alt="">
+                        <img src="img/Md-logo-form.png" alt="">
                     </a>
                 </div>
-                <h3>Sign in</h3>
+                <h3>Iniciar sesión</h3>
                 <form action="#">
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
@@ -609,11 +609,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <input type="password" placeholder="Password">
                         </div>
                         <div class="col-xl-12">
-                            <button type="submit" class="boxed_btn_orange">Sign in</button>
+                            <button type="submit" class="boxed_btn_orange">Log in</button>
                         </div>
                     </div>
                 </form>
-                <p class="doen_have_acc">Don’t have an account? <a class="dont-hav-acc" href="#test-form2">Sign Up</a>
+                <p class="doen_have_acc">¿No tienes una cuenta? <a class="dont-hav-acc" href="#test-form2">Crea una cuenta</a>
                 </p>
             </div>
         </div>
@@ -626,10 +626,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <div class="popup_inner">
                 <div class="logo text-center">
                     <a href="#">
-                        <img src="img/form-logo.png" alt="">
+                        <img src="img/Md-logo-form.png" alt="">
                     </a>
                 </div>
-                <h3>Resistration</h3>
+                <h3>Crear cuenta</h3>
                 <form action="#">
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
