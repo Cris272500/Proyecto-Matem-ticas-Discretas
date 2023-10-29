@@ -53,18 +53,18 @@
                                         <li><a class="active" href="courses.php">Cursos</a></li>
                                         <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="course_details.php">course details</a></li>
+                                                <li><a href="course_details.php">Descripción</a></li>
                                                 <li><a href="elements.php">elements</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="about.php">About</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                        <li><a href="about.php">Nosotros</a></li>
+                                        <li><a href="#">Foro <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="blog.php">blog</a></li>
-                                                <li><a href="single-blog.php">single-blog</a></li>
+                                                <li><a href="blog.php">Foro</a></li>
+                                                <li><a href="single-blog.php">Detalles del foro</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.php">Contact</a></li>
+                                        <li><a href="contact.php">Contáctanos</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -94,7 +94,7 @@
     <!-- header-end -->
         <!-- bradcam_area_start -->
         <div class="bradcam_area breadcam_bg overlay2">
-            <h3>Our Courses</h3>
+            <h3>Cursos disponibles</h3>
         </div>
         <!-- bradcam_area_end -->
 
@@ -104,9 +104,10 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title text-center mb-100">
-                        <h3>Popular Courses</h3>
-                        <p>Your domain control panel is designed for ease-of-use and <br> allows for all aspects of your
-                            domains.</p>
+                        <h3>Explora Nuestros Cursos de Matemáticas</h3>
+                        <p>Adéntrate en una gama diversa de cursos, desde fundamentos hasta niveles avanzados. <br>
+                            Aprende, practica y domina las matemáticas con nosotros, mientras también <br>
+                            exploras la programación en Java para aplicar tus conocimientos en ejercicios prácticos.</p>
                     </div>
                 </div>
             </div>
@@ -117,39 +118,35 @@
                             <ul class="nav" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                        aria-controls="home" aria-selected="true">All Courses</a>
+                                        aria-controls="home" aria-selected="true">Todos los cursos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                        aria-controls="profile" aria-selected="false">Photoshop</a>
+                                        aria-controls="profile" aria-selected="false">Números y operaciones básicas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                        aria-controls="contact" aria-selected="false">UI/UX</a>
+                                        aria-controls="contact" aria-selected="false">Álgebra básica</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="design-tab" data-toggle="tab" href="#design" role="tab"
-                                        aria-controls="design" aria-selected="false">Web Design</a>
+                                        aria-controls="design" aria-selected="false">Funciones</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="Web-tab" data-toggle="tab" href="#Web" role="tab"
-                                        aria-controls="design" aria-selected="false">Web dev</a>
+                                        aria-controls="design" aria-selected="false">Límites y continuidad</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="Web-tab1" data-toggle="tab" href="#Web1" role="tab"
-                                        aria-controls="design" aria-selected="false">Wordpress</a>
+                                        aria-controls="design" aria-selected="false">Derivadas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="Web-tab11" data-toggle="tab" href="#Web11" role="tab"
-                                        aria-controls="design" aria-selected="false">Adobe XD</a>
+                                        aria-controls="design" aria-selected="false">Integrales</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="Adobe-XD-tab8" data-toggle="tab" href="#Adobe-XD8" role="tab"
-                                        aria-controls="design" aria-selected="false">Sketch App</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="Adobe-XD-tab9" data-toggle="tab" href="#Adobe-XD9" role="tab"
-                                        aria-controls="design" aria-selected="false">Illustrator</a>
+                                        aria-controls="design" aria-selected="false">Teorema fundamental del cálculo</a>
                                 </li>
                             </ul>
                         </nav>
@@ -1626,217 +1623,6 @@
     <!-- popular_courses_end-->
 
 
-    <!-- testimonial_area_start -->
-    <div class="testimonial_area testimonial_bg_1 overlay">
-        <div class="testmonial_active owl-carousel">
-            <div class="single_testmoial">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="testmonial_text text-center">
-                                <div class="author_img">
-                                    <img src="img/testmonial/author_img.png" alt="">
-                                </div>
-                                <p>
-                                    "Working in conjunction with humanitarian aid <br> agencies we have supported
-                                    programmes to <br>
-                                    alleviate.
-                                    human suffering.
-
-                                </p>
-                                <span>- Jquileen</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single_testmoial">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="testmonial_text text-center">
-                                <div class="author_img">
-                                    <img src="img/testmonial/author_img.png" alt="">
-                                </div>
-                                <p>
-                                    "Working in conjunction with humanitarian aid <br> agencies we have supported
-                                    programmes to <br>
-                                    alleviate.
-                                    human suffering.
-
-                                </p>
-                                <span>- Jquileen</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- testimonial_area_end -->
-
-    <!-- our_courses_start -->
-    <div class="our_courses">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-100">
-                        <h3>Our Course Speciality</h3>
-                        <p>Your domain control panel is designed for ease-of-use and <br>
-                            allows for all aspects of your domains.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-md-6 col-lg-6">
-                    <div class="single_course text-center">
-                        <div class="icon">
-                            <i class="flaticon-art-and-design"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            Your domain control panel is designed for ease-of-use <br> and <br>
-                            allows for all aspects of
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-6">
-                    <div class="single_course text-center">
-                        <div class="icon blue">
-                            <i class="flaticon-business-and-finance"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            Your domain control panel is designed for ease-of-use <br> and <br>
-                            allows for all aspects of
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-6">
-                    <div class="single_course text-center">
-                        <div class="icon">
-                            <i class="flaticon-premium"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            Your domain control panel is designed for ease-of-use <br> and <br>
-                            allows for all aspects of
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-6">
-                    <div class="single_course text-center">
-                        <div class="icon gradient">
-                            <i class="flaticon-crown"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            Your domain control panel is designed for ease-of-use <br> and <br>
-                            allows for all aspects of
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- our_courses_end -->
-
-    <!-- subscribe_newsletter_Start -->
-    <div class="subscribe_newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="newsletter_text">
-                        <h3>Subscribe Newsletter</h3>
-                        <p>Your domain control panel is designed for ease-of-use and allows for all aspects of your</p>
-                    </div>
-                </div>
-                <div class="col-xl-5 offset-xl-1 col-lg-6">
-                    <div class="newsletter_form">
-                        <h4>Your domain control panel is</h4>
-                        <form action="#" class="newsletter_form">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit">Sign Up</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- subscribe_newsletter_end -->
-
-    <!-- our_latest_blog_start -->
-    <div class="our_latest_blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-100">
-                        <h3>Our Latest Blog</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/1.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/2.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/3.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- our_latest_blog_end -->
-
-
     <!-- footer -->
     <footer class="footer footer_bg_1">
         <div class="footer_top">
@@ -1949,10 +1735,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <div class="popup_inner">
                 <div class="logo text-center">
                     <a href="#">
-                        <img src="img/form-logo.png" alt="">
+                        <img src="img/Md-logo-form.png" alt="">
                     </a>
                 </div>
-                <h3>Sign in</h3>
+                <h3>Iniciar sesión</h3>
                 <form action="#">
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
@@ -1962,11 +1748,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <input type="password" placeholder="Password">
                         </div>
                         <div class="col-xl-12">
-                            <button type="submit" class="boxed_btn_orange">Sign in</button>
+                            <button type="submit" class="boxed_btn_orange">Log in</button>
                         </div>
                     </div>
                 </form>
-                <p class="doen_have_acc">Don’t have an account? <a class="dont-hav-acc" href="#test-form2">Sign Up</a>
+                <p class="doen_have_acc">¿No tienes una cuenta? <a class="dont-hav-acc" href="#test-form2">Crea una cuenta</a>
                 </p>
             </div>
         </div>
@@ -1979,10 +1765,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <div class="popup_inner">
                 <div class="logo text-center">
                     <a href="#">
-                        <img src="img/form-logo.png" alt="">
+                        <img src="img/Md-logo-form.png" alt="">
                     </a>
                 </div>
-                <h3>Resistration</h3>
+                <h3>Crear cuenta</h3>
                 <form action="#">
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
