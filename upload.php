@@ -1,7 +1,11 @@
 <?php
 
-if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
+if (isset($_POST['submit']) && isset($_POST['titulo']) && isset($_POST['categoria']) && isset($_POST['duracion']) && isset($_POST['descripcion']) && isset($_FILES['my_image'])) {
     include "db_conn_.php";
+    $titulo = $_POST['titulo'];
+    $categoria = $_POST['categoria'];
+    $duracion = $_POST['duracion'];
+    $descripcion = $_POST['descripcion'];
 
     echo "<pre>";
     print_r($_FILES['my_image']);
@@ -13,7 +17,7 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
     $error = $_FILES['my_image']['error'];
 
     if ($error === 0) {
-        if ($img_size > 125000) {
+        if ($img_size > 3000000) {
             $em = "El archivo es muy grande!";
             header("Location: test.php?error=$em");
         }else{
@@ -24,12 +28,15 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 
             if (in_array($img_ex_lc, $allowed_exs)){
                 $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
-                $img_upload_path = 'uploads/'.$new_img_name;
+                $img_upload_path = 'CursosRegistrados/'.$new_img_name;
                 move_uploaded_file($tmp_name, $img_upload_path);
 
+                // Obteniendo valores post en variables
+
+
                 // Insertar a la base de datos
-                $sql = "INSERT INTO images(image_url)
-                        VALUES('$new_img_name')";
+                $sql = "INSERT INTO cursos(titulo, categoria, duracion, descripcion, url_img)
+                        VALUES('$titulo', '$categoria', '$duracion', '$descripcion', '$new_img_name')";
                 mysqli_query($conn, $sql);
                 header("Location: view.php");
 

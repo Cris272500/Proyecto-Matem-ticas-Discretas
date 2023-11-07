@@ -153,178 +153,240 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="row">
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Números y Operaciones Básicas</span>
-                                        <h3><a href="#">Fundamentos de <br>
-                                                Números Reales</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                background-color: green;
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/1. Números y Operaciones Básicas/1.jpg');
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Números y Operaciones Básicas</span>
+                                            <h3 name="presentacion" id="presentacion">Fundamentos de <br>Números Reales</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/1. Números y Operaciones Básicas/2.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Números y Operaciones Básicas</span>
-                                        <h3><a href="#">Fracciones y Decimales</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/1. Números y Operaciones Básicas/2.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Números y Operaciones Básicas</span>
+                                            <h3 name="presentacion" id="presentacion">Fracciones y decimales</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses" id="numeros">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/1. Números y Operaciones Básicas/3.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Números y Operaciones Básicas</span>
-                                        <h3><a href="#">Propiedades de <br>
-                                                las Operaciones</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/1. Números y Operaciones Básicas/3.jpg');
+                                                background-size: contain;
+                                                background-position: 10px 10px;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Números y Operaciones Básicas</span>
+                                            <h3 name="presentacion" id="presentacion">Propiedades de <br>las Operaciones</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/2. Algebra Básica/1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Álgebra Básica</span>
-                                        <h3><a href="#">Introducción al Álgebra</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/2. Algebra Básica/1.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Álgebra básica</span>
+                                            <h3 name="presentacion" id="presentacion">Introducción al álgebra</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <img src="img/courses/2. Algebra Básica/2.jpg" alt="">
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Álgebra Básica</span>
-                                        <h3><a href="#">Ecuaciones lineales</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/2. Algebra Básica/2.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Álgebra básica</span>
+                                            <h3 name="presentacion" id="presentacion">Ecuaciones lineales</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/2. Algebra Básica/3.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Álgebra Básica</span>
-                                        <h3><a href="#">Inecuaciones</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/2. Algebra Básica/3.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Álgebra básica</span>
+                                            <h3 name="presentacion" id="presentacion">Inecuaciones</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/3. Funciones/4.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Funciones</span>
-                                        <h3><a href="#">Introducción a las Funciones</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/3. Funciones/4.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Funciones</span>
+                                            <h3 name="presentacion" id="presentacion">Introducción a las funciones</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
@@ -387,80 +449,104 @@
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="row">
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Números y Operaciones Básicas</span>
-                                        <h3><a href="#">Fundamentos de <br>
-                                                Números Reales</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                background-color: green;
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/1. Números y Operaciones Básicas/1.jpg');
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Números y Operaciones Básicas</span>
+                                            <h3 name="presentacion" id="presentacion">Fundamentos de <br>Números Reales</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/1. Números y Operaciones Básicas/2.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Números y Operaciones Básicas</span>
-                                        <h3><a href="#">Fracciones y Decimales</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/1. Números y Operaciones Básicas/2.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Números y Operaciones Básicas</span>
+                                            <h3 name="presentacion" id="presentacion">Fracciones y decimales</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses" id="numeros">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/1. Números y Operaciones Básicas/3.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Números y Operaciones Básicas</span>
-                                        <h3><a href="#">Propiedades de <br>
-                                                las Operaciones</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/1. Números y Operaciones Básicas/3.jpg');
+                                                background-size: contain;
+                                                background-position: 10px 10px;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Números y Operaciones Básicas</span>
+                                            <h3 name="presentacion" id="presentacion">Propiedades de <br>las Operaciones</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -468,76 +554,105 @@
                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="row">
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/2. Algebra Básica/1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Álgebra Básica</span>
-                                        <h3><a href="#">Introducción al Álgebra</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/2. Algebra Básica/1.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Álgebra básica</span>
+                                            <h3 name="presentacion" id="presentacion">Introducción al álgebra</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <img src="img/courses/2. Algebra Básica/2.jpg" alt="">
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Álgebra Básica</span>
-                                        <h3><a href="#">Ecuaciones lineales</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/2. Algebra Básica/2.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Álgebra básica</span>
+                                            <h3 name="presentacion" id="presentacion">Ecuaciones lineales</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/2. Algebra Básica/3.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Álgebra Básica</span>
-                                        <h3><a href="#">Inecuaciones</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/2. Algebra Básica/3.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Álgebra básica</span>
+                                            <h3 name="presentacion" id="presentacion">Inecuaciones</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -545,28 +660,37 @@
                     <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">
                         <div class="row">
                             <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/3. Funciones/4.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="courses_info">
-                                        <span>Funciones</span>
-                                        <h3><a href="#">Introducción a las Funciones</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
+                                <div class="single_courses curso">
+                                    <form action="consulta_cursos.php" method="post" enctype="multipart/form-data">
+                                        <div class="thumb">
+                                            <!--<img src="img/courses/1. Números y Operaciones Básicas/1.jpg" alt="">-->
+                                            <button type="submit" name="submit" class="btnSubmit" style="
+                                                width: 510px;
+                                                height: 380px; 
+                                                background-image: url('img/courses/3. Funciones/4.jpg');
+                                                background-size: cover;
+                                                background-position: center;
+                                                cursor: pointer;
+                                                "></button>
+                                        </div>
+                                        <div class="courses_info">
+                                            <span>Funciones</span>
+                                            <h3 name="presentacion" id="presentacion">Introducción a las funciones</h3>
+                                            <input type="text" class="titulo" name="titulo" style="visibility: hidden;">
+                                            <div class="star_prise d-flex justify-content-between">
+                                                <div class="star">
+                                                    <i class="flaticon-mark-as-favorite-star"></i>
+                                                    <span>(4.5)</span>
+                                                </div>
+                                                <div class="prise">
+                                                    <span class="offer">$89.00</span>
+                                                    <span class="active_prise">
+                                                        $49
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
@@ -1639,7 +1763,18 @@
     <script src="js/main.js"></script>
 
     <script>
-        // Cuando le da click a la opcion de todos los cursos
+        var botones = document.getElementsByClassName("btnSubmit");
+        var inputs = document.getElementsByClassName("titulo");
+
+        for (var i = 0; i < botones.length; i++) {
+            botones[i].addEventListener('click', function(event) {
+                var contenidoH3 = this.closest(".curso").querySelector("h3[name='presentacion']").textContent;
+                var indice = Array.prototype.indexOf.call(botones, this);
+                inputs[indice].value = contenidoH3;
+            });
+        }
+
+        //document.getElementById("titulo").value = contenidoH3;
     </script>
 </body>
 

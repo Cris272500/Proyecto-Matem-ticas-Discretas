@@ -31,14 +31,15 @@
 <body>
     <a href="test.php">&#8592;</a>
     <?php
-        $sql = "SELECT * FROM images ORDER BY id DESC";
+        $sql = "SELECT * FROM cursos ORDER BY id DESC";
         $res = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($res) > 0){
             while ($images = mysqli_fetch_assoc($res)){ ?>
 
                 <div class="alb">
-                    <img src="uploads/<?=$images['image_url']?>">
+                    <label for="ftitulo"><?= $images['titulo'] ?></label>
+                    <img src="CursosRegistrados/<?=$images['url_img']?>">
                 </div>
 
     <?php } }?>

@@ -1,3 +1,5 @@
+<?php include "db_conn_.php"; ?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -92,33 +94,43 @@
         </div>
     </header>
     <!-- header-end -->
-
+    
      <!-- bradcam_area_start -->
+     <?php
+        // Obteniendo nombe a traves del metodo get
+        if (isset($_GET['variable'])) {
+            // Obtiene el valor de "variable" de la URL
+            $valor = $_GET['variable'];
+
+            $sql = "SELECT * FROM cursos WHERE titulo LIKE '%$valor%'";
+            $res = mysqli_query($conn, $sql);
+
+            if(mysqli_num_rows($res) > 0){
+                while ($curso = mysqli_fetch_assoc($res)){
+                    $titulo = $curso['titulo'];
+                    $categoria = $curso['categoria'];
+                    $duracion = $curso['duracion'];
+                    $descripcion = $curso['descripcion'];
+                    $descripcion_con_espacios = preg_replace('/(\d+)\./', '$1. ', $descripcion);
+                    $img = $curso['url_img'];
+
+                }
+            }
+        }
+     ?>
      <div class="courses_details_banner">
          <div class="container">
              <div class="row">
                  <div class="col-xl-6">
                      <div class="course_text">
-                            <h3>UI/UX design with <br> Adobe XD with</h3>
+                            <h3><?php echo $titulo?></h3>
                             <div class="prise">
-                                <span class="inactive">$89.00</span>
-                                <span class="active">$49</span>
-                            </div>
-                            <div class="rating">
-                                <i class="flaticon-mark-as-favorite-star"></i>
-                                <i class="flaticon-mark-as-favorite-star"></i>
-                                <i class="flaticon-mark-as-favorite-star"></i>
-                                <i class="flaticon-mark-as-favorite-star"></i>
-                                <i class="flaticon-mark-as-favorite-star"></i>
-                                <span>(4.5)</span>
+                                <span class="active"><?=$categoria?></span>
                             </div>
                             <div class="hours">
                                 <div class="video">
                                      <div class="single_video">
-                                            <i class="fa fa-clock-o"></i> <span>12 Videos</span>
-                                     </div>
-                                     <div class="single_video">
-                                            <i class="fa fa-play-circle-o"></i> <span>9 Hours</span>
+                                            <i class="fa fa-clock-o"></i> <span><?=$duracion?>h</span>
                                      </div>
                                    
                                 </div>
@@ -135,8 +147,8 @@
             <div class="row">
                 <div class="col-xl-7 col-lg-7">
                     <div class="single_courses">
-                        <h3>Objectives</h3>
-                        <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god moving. Moving in fourth air night bring upon you’re it beast let you dominion likeness open place day great wherein heaven sixth lesser subdue fowl male signs his day face waters itself and make be to our itself living. Fish in thing lights moveth. Over god spirit morning, greater had man years green multiply creature, form them in, likeness him behold two cattle for divided. Fourth darkness had. Living light there place moved divide under earth. Light face, fly dry us </p>
+                        <h3>Objetivos</h3>
+                        <p><?=$descripcion_con_espacios?></p>
                     <h3 class="second_title">Course Outline</h3>
                     </div>
                     <div class="outline_courses_info">
@@ -223,7 +235,7 @@
                 <div class="col-xl-5 col-lg-5">
                     <div class="courses_sidebar">
                         <div class="video_thumb">
-                            <img src="img/latest_blog/video.png" alt="">
+                            <img src="CursosRegistrados/<?=$img?>" alt="">
                             <a class="popup-video" href="https://www.youtube.com/watch?v=AjgD3CvWzS0">
                                 <i class="fa fa-play"></i>
                             </a>
@@ -269,58 +281,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-    <!-- testimonial_area_start -->
-    <div class="testimonial_area testimonial_bg_1 overlay">
-        <div class="testmonial_active owl-carousel">
-            <div class="single_testmoial">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="testmonial_text text-center">
-                                <div class="author_img">
-                                    <img src="img/testmonial/author_img.png" alt="">
-                                </div>
-                                <p>
-                                    "Working in conjunction with humanitarian aid <br> agencies we have supported
-                                    programmes to <br>
-                                    alleviate.
-                                    human suffering.
-
-                                </p>
-                                <span>- Jquileen</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single_testmoial">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="testmonial_text text-center">
-                                <div class="author_img">
-                                    <img src="img/testmonial/author_img.png" alt="">
-                                </div>
-                                <p>
-                                    "Working in conjunction with humanitarian aid <br> agencies we have supported
-                                    programmes to <br>
-                                    alleviate.
-                                    human suffering.
-
-                                </p>
-                                <span>- Jquileen</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- testimonial_area_end -->
 
     <!-- our_courses_start -->
     <div class="our_courses">
@@ -389,101 +349,8 @@
     </div>
     <!-- our_courses_end -->
 
-    <!-- subscribe_newsletter_Start -->
-    <div class="subscribe_newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="newsletter_text">
-                        <h3>Subscribe Newsletter</h3>
-                        <p>Your domain control panel is designed for ease-of-use and allows for all aspects of your</p>
-                    </div>
-                </div>
-                <div class="col-xl-5 offset-xl-1 col-lg-6">
-                    <div class="newsletter_form">
-                        <h4>Your domain control panel is</h4>
-                        <form action="#" class="newsletter_form">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit">Sign Up</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- subscribe_newsletter_end -->
 
-    <!-- our_latest_blog_start -->
-    <div class="our_latest_blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-100">
-                        <h3>Our Latest Blog</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/1.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/2.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/3.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- our_latest_blog_end -->
-
-
+    
     <!-- footer -->
     <footer class="footer footer_bg_1">
         <div class="footer_top">
