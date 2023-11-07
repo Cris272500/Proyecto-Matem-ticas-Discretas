@@ -253,7 +253,8 @@ label {
 }
 
 button {
-    border-radius: 0
+    border-radius: 0;
+    padding: 200px;
 }
 
 button:focus {
