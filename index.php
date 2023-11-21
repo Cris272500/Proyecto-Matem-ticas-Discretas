@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] === 'GET'){
+        if (isset($_SESSION['valid'])){
+            $id = $_SESSION['id'];
+        }
+    }
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -24,15 +33,17 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/cositas.js"></script>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
-<body>
+<body onload="cambiarContenidoYDesactivar()">
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-
+    
     <!-- header-start -->
+    
     <header>
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
@@ -69,20 +80,35 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                            <div class="log_chat_area d-flex align-items-center">
-                                <a href="#test-form" class="login popup-with-form">
-                                    <i class="flaticon-user"></i>
-                                    <span>log in</span>
-                                </a>
-                                <div class="live_chat_btn">
-                                    <a class="boxed_btn_orange" href="#">
-                                        <i class="fa fa-phone"></i>
-                                        <span>+10 378 467 3672</span>
-                                    </a>
+                        <?php
+                            // Obteniendo nombre del usuario
+                            if (empty($_SESSION['name'])){
+                                $name = "log in";
+                            }else{
+                                $nombres = explode(" ", $_SESSION['name']);
+
+                                // Obtener el primer nombre
+                                $name = $nombres[0];
+                            }
+                        ?>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="log_chat_area d-flex align-items-center">
+                                    <form action="logout.php" method="post">
+                                        <a href="#test-form" class="login popup-with-form" id="enlace_name">
+                                                <i class="flaticon-user"></i>
+                                                <span><?=$name?></span>
+                                            </a>
+
+                                                <div class="live_chat_btn">
+                                                    <a class="boxed_btn_orange" href="#" id="etiqueta">
+                                                        <i class="fa fa-phone"></i>
+                                                        <span>Cerrar sesion</span>
+                                                    </a>
+                                                    <button id="miBoton" style="display:none;" name="btn_logout">Botón Oculto</button>
+                                                </div>
+                                    </form>
                                 </div>
                             </div>
-                        </div>
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
@@ -363,7 +389,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <!-- form itself end-->
-    <form id="test-form" class="white-popup-block mfp-hide">
+    <form id="test-form" class="white-popup-block mfp-hide" action="login.php" method="post">
         <div class="popup_box ">
             <div class="popup_inner">
                 <div class="logo text-center">
@@ -372,16 +398,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     </a>
                 </div>
                 <h3>Iniciar sesión</h3>
-                <form action="#">
+                <form action="">
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
-                            <input type="email" placeholder="Enter email">
+                            <input type="email" placeholder="Enter email" name="correo">
                         </div>
                         <div class="col-xl-12 col-md-12">
-                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Password" name="password">
                         </div>
                         <div class="col-xl-12">
-                            <button type="submit" class="boxed_btn_orange">Log in</button>
+                            <button type="submit" class="boxed_btn_orange" name="login_submit">Log in</button>
                         </div>
                     </div>
                 </form>
@@ -452,6 +478,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
+
+    <script>
+        window.onload = clickBoton();
+    </script>
+
 </body>
 
 </html>

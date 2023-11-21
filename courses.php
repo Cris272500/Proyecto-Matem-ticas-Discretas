@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    if (isset($_SESSION['valid'])) {
+        $id = $_SESSION['id'];
+    }
+}
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -24,10 +34,12 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/cositas.js"></script>
+
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
-<body>
+<body onload="cambiarContenidoYDesactivar()">
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -69,18 +81,31 @@
                                 </nav>
                             </div>
                         </div>
+                        <?php
+                        // Obteniendo nombre del usuario
+                        if (empty($_SESSION['name'])) {
+                            $name = "log in";
+                        } else {
+                            $nombres = explode(" ", $_SESSION['name']);
+
+                            // Obtener el primer nombre
+                            $name = $nombres[0];
+                        }
+                        ?>
+
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="log_chat_area d-flex align-items-center">
-                                <a href="#test-form" class="login popup-with-form">
-                                    <i class="flaticon-user"></i>
-                                    <span>log in</span>
+                                <form action="logout.php" method="post">
                                 </a>
                                 <div class="live_chat_btn">
-                                    <a class="boxed_btn_orange" href="#">
+                                    <a class="boxed_btn_orange" href="#" id="etiqueta">
                                         <i class="fa fa-phone"></i>
-                                        <span>+10 378 467 3672</span>
+                                        <span>Cerrar sesion</span>
                                     </a>
+                                    <button id="miBoton" style="display:none;" name="btn_logout">Botón Oculto</button>
                                 </div>
+                                </form>
+                                
                             </div>
                         </div>
                         <div class="col-12">
@@ -1775,6 +1800,10 @@
         }
 
         //document.getElementById("titulo").value = contenidoH3;
+    </script>
+
+    <script>
+        window.onload = clickBoton();
     </script>
 </body>
 
