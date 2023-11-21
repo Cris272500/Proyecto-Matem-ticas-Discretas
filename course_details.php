@@ -94,51 +94,72 @@
         </div>
     </header>
     <!-- header-end -->
-    
-     <!-- bradcam_area_start -->
-     <?php
-        // Obteniendo nombe a traves del metodo get
-        if (isset($_GET['variable'])) {
-            // Obtiene el valor de "variable" de la URL
-            $valor = $_GET['variable'];
 
-            $sql = "SELECT * FROM cursos WHERE titulo LIKE '%$valor%'";
-            $res = mysqli_query($conn, $sql);
+    <!-- bradcam_area_start -->
+    <?php
+    // Obteniendo nombe a traves del metodo get
+    if (isset($_GET['variable'])) {
+        // Obtiene el valor de "variable" de la URL
+        $valor = $_GET['variable'];
 
-            if(mysqli_num_rows($res) > 0){
-                while ($curso = mysqli_fetch_assoc($res)){
-                    $titulo = $curso['titulo'];
-                    $categoria = $curso['categoria'];
-                    $duracion = $curso['duracion'];
-                    $descripcion = $curso['descripcion'];
-                    $descripcion_con_espacios = preg_replace('/(\d+)\./', '$1. ', $descripcion);
-                    $img = $curso['url_img'];
+        $sql = "SELECT * FROM cursos WHERE titulo LIKE '%$valor%'";
+        $res = mysqli_query($conn, $sql);
 
+        if (mysqli_num_rows($res) > 0) {
+            while ($curso = mysqli_fetch_assoc($res)) {
+                $id = $curso['id'];
+                $titulo = $curso['titulo'];
+                $categoria = $curso['categoria'];
+                $duracion = $curso['duracion'];
+                $descripcion = $curso['descripcion'];
+                $descripcion_con_espacios = preg_replace('/(\d+)\./', '$1. ', $descripcion);
+                $img = $curso['url_img'];
+            }
+
+            // Haciendo el inner join con la tabla lecciones
+            $sql2 = "SELECT lecciones.id, lecciones.curso_id, lecciones.titulo, lecciones.descripcion, lecciones.orden FROM lecciones
+                         INNER JOIN cursos
+                         ON lecciones.curso_id = cursos.id
+                         WHERE lecciones.curso_id = '$id'";
+
+            $res_lecciones = mysqli_query($conn, $sql2);
+            $lecciones = []; // Crear un array para almacenar todas las lecciones
+
+            if (mysqli_num_rows($res_lecciones) > 0) {
+                while ($leccion = mysqli_fetch_assoc($res_lecciones)) {
+                    $lecciones[] = [
+                        'id' => $leccion['id'],
+                        'curso_id' => $leccion['curso_id'],
+                        'titulo' => $leccion['titulo'],
+                        'descripcion' => $leccion['descripcion'],
+                        'orden' => $leccion['orden']
+                    ];
                 }
             }
         }
-     ?>
-     <div class="courses_details_banner">
-         <div class="container">
-             <div class="row">
-                 <div class="col-xl-6">
-                     <div class="course_text">
-                            <h3><?php echo $titulo?></h3>
-                            <div class="prise">
-                                <span class="active"><?=$categoria?></span>
-                            </div>
-                            <div class="hours">
-                                <div class="video">
-                                     <div class="single_video">
-                                            <i class="fa fa-clock-o"></i> <span><?=$duracion?>h</span>
-                                     </div>
-                                   
+    }
+    ?>
+    <div class="courses_details_banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="course_text">
+                        <h3><?php echo $titulo ?></h3>
+                        <div class="prise">
+                            <span class="active"><?= $categoria ?></span>
+                        </div>
+                        <div class="hours">
+                            <div class="video">
+                                <div class="single_video">
+                                    <i class="fa fa-clock-o"></i> <span><?= $duracion ?>h</span>
                                 </div>
+
                             </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- bradcam_area_end -->
 
@@ -148,94 +169,34 @@
                 <div class="col-xl-7 col-lg-7">
                     <div class="single_courses">
                         <h3>Objetivos</h3>
-                        <p><?=$descripcion_con_espacios?></p>
-                    <h3 class="second_title">Course Outline</h3>
+                        <p><?= $descripcion_con_espacios ?></p>
+                        <h3 class="second_title">Ruta de aprendizaje</h3>
                     </div>
                     <div class="outline_courses_info">
-                            <div id="accordion">
-                                    <div class="card">
-                                        <div class="card-header" id="headingTwo">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    <i class="flaticon-question"></i> Is WordPress hosting worth it?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                                let god moving. Moving in fourth air night bring upon
-                                            </div>
-                                        </div>
+                        <div id="accordion">
+                            <?php foreach ($lecciones as $index => $leccion) : ?>
+                                <div class="card">
+                                    <div class="card-header" id="heading<?= $index ?>">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                                                <i class="flaticon-question"></i> <?= $leccion['titulo'] ?>
+                                            </button>
+                                        </h5>
                                     </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                    <i class="flaticon-question"></i>Basic Classes</span>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
-                                            <div class="card-body">
-                                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                                let god moving. Moving in fourth air night bring upon
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <i class="flaticon-question"></i> Will you transfer my site?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                                let god moving. Moving in fourth air night bring upon
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="heading_4">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">
-                                                    <i class="flaticon-question"></i> Why should I host with Hostza?
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                                let god moving. Moving in fourth air night bring upon
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="heading_5">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" aria-controls="collapse_5">
-                                                    <i class="flaticon-question"></i> How do I get started <span>with Shared
-                                                        Hosting?</span>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapse_5" class="collapse" aria-labelledby="heading_5" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                                let god moving. Moving in fourth air night bring upon
-                                            </div>
+                                    <div id="collapse<?= $index ?>" class="collapse" aria-labelledby="heading<?= $index ?>" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <?= $leccion['descripcion'] ?>
                                         </div>
                                     </div>
                                 </div>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5">
                     <div class="courses_sidebar">
                         <div class="video_thumb">
-                            <img src="CursosRegistrados/<?=$img?>" alt="">
+                            <img src="CursosRegistrados/<?= $img ?>" alt="">
                             <a class="popup-video" href="https://www.youtube.com/watch?v=AjgD3CvWzS0">
                                 <i class="fa fa-play"></i>
                             </a>
@@ -243,7 +204,7 @@
                         <div class="author_info">
                             <div class="auhor_header">
                                 <div class="thumb">
-                                        <img src="img/latest_blog/author.png" alt="">
+                                    <img src="img/latest_blog/author.png" alt="">
                                 </div>
                                 <div class="name">
                                     <h3>Macau Wilium</h3>
@@ -270,8 +231,8 @@
                             <i class="flaticon-mark-as-favorite-star"></i>
                             <i class="flaticon-mark-as-favorite-star"></i>
                             <i class="flaticon-mark-as-favorite-star"></i>
-                            
-                        <form action="#">
+
+                            <form action="#">
                                 <textarea name="" id="" cols="30" rows="10" placeholder="Write your feedback"></textarea>
                                 <button type="submit" class="boxed_btn">Submit</button>
                             </form>
@@ -350,7 +311,7 @@
     <!-- our_courses_end -->
 
 
-    
+
     <!-- footer -->
     <footer class="footer footer_bg_1">
         <div class="footer_top">
@@ -446,8 +407,10 @@
                     <div class="col-xl-12">
                         <p class="copy_right text-center">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
                 </div>
